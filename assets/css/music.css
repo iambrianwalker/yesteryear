@@ -6,11 +6,12 @@
 }
 
 body {
-    position: fixed;
-    background: url("/assets/images/backdrop_yesteryear.JPG") center/cover no-repeat fixed;
+    position:relative;
+    background: url("/assets/images/backdrop_yesteryear.JPG") center/cover no-repeat;
     background-blend-mode: lighten;
     font-family: 'Akira Expanded', sans-serif;
     margin: 0;
+    padding: 20px;
 }
 
 ul, ol {
@@ -56,6 +57,18 @@ a:hover {
     color: transparent;
 }
 
+.a{
+    color: rgba(255, 255, 0, 0.497);
+}
+
+.b{
+    color: rgba(0, 0, 255, 0.462);
+}
+
+.c{
+    color: rgba(255, 0, 0, 0.473);
+}
+
 .nav li {
     margin-left: 20px;
 }
@@ -85,6 +98,7 @@ a:hover {
     align-items: center;
     position: fixed;
     bottom: 0;
+    left:0;
     width: 100%;
     background-color: rgba(255, 255, 255, 0.6);
     color: black;
@@ -95,10 +109,133 @@ a:hover {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    background-color: #000;
+    background-color: rgba(255, 255, 255, 0.6);
     color: #fff;
-    border-radius: 5%;
+    border-radius: 17%;
+    text-shadow: 2px 2px 0 #000;
 }
+
+#about, .ceo, #bio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.bio-list,
+.ceo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.ceo{
+    text-align: center;
+    margin-top: 10%;
+}
+
+#bio{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    text-align: center;
+    margin:20%;
+}
+
+.image-animation {
+  position: relative;
+  width: 250px; 
+  height: auto; 
+  margin: 1rem;
+
+}
+
+
+.image-animation:hover .picone{
+    -webkit-animation: picone 1.5s 2 alternate;
+     -moz-animation: picone 1.5s 2 alternate;
+      -ms-animation: picone 1.5s 2 alternate;
+       -o-animation: picone 1.5s 2 alternate;
+          animation: picone 1.5s 2 alternate;
+}
+
+.image-animation:hover .pictwo{
+    -webkit-animation: pictwo 1.5s 2 alternate;
+     -moz-animation: pictwo 1.5s 2 alternate;
+      -ms-animation: pictwo 1.5s 2 alternate;
+       -o-animation: pictwo 1.5s 2 alternate;
+          animation: pictwo 1.5s 2 alternate;
+}
+
+.picone, .pictwo {
+  height: auto;
+  margin: 20px;
+  position: absolute;
+  width: 230px;
+  top:0;
+  left:0;
+
+   
+  -webkit-box-shadow: 3px 3px 3px rgba(0,0,0,0.3);
+          box-shadow: 3px 3px 3px rgba(0,0,0,0.3);
+}
+
+.picone {
+  -webkit-transform: rotate(-7deg);
+     -moz-transform: rotate(-7deg);
+       -o-transform: rotate(-7deg);
+      -ms-transform: rotate(-7deg);
+          transform: rotate(-7deg);
+
+}
+ 
+.pictwo {
+  left: 100px;
+  -webkit-transform: rotate(7deg);
+     -moz-transform: rotate(7deg);
+       -o-transform: rotate(7deg);
+      -ms-transform: rotate(7deg);
+          transform: rotate(7deg);
+}
+
+@keyframes picone {
+  0% {transform: rotate(-7deg)}
+  50% {transform: rotate(-14deg)}
+  100% {transform: rotate(-7deg)}
+}
+ 
+@keyframes pictwo {
+  0% {left: 100px; z-index: 1; transform: rotate(7deg)}
+  49% {left: 350px; z-index: 1; transform: rotate(20deg)}
+  50% {left: 350px; z-index: -3; transform: rotate(20deg)}
+  100% {left: 100px; z-index: -3; transform: rotate(7deg)}
+}
+
+.caption {
+  margin-top: 280px; /* pushes text below the animated images */
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.caption h3 {
+  margin: 6rem 0 0;
+  font-size: 1.2rem;
+  color: #fff;
+  text-shadow: 2px 2px 0 #000;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.caption .job-title {
+  margin: 0;
+  font-size: 1rem;
+  color: #fff;
+  text-shadow: 2px 2px 0 #000;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
 
 @media screen and (max-width: 440px) {
     * {
