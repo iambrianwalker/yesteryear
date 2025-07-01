@@ -7,7 +7,7 @@
 
 body {
     position: fixed;
-    background: url("backdrop_yesteryear.JPG") center/cover no-repeat fixed;
+    background: url("/assets/images/backdrop_yesteryear.JPG") center/cover no-repeat fixed;
     background-blend-mode: lighten;
     font-family: 'Akira Expanded', sans-serif;
     margin: 0;
@@ -67,7 +67,7 @@ a:hover {
     text-align: center;
 }
 
-#center-page h1 {
+#center-page h1, #about h2 {
     font-size: 60px;
     color: white;
     text-shadow: 2px 2px 0 #000;
@@ -90,6 +90,15 @@ a:hover {
     color: black;
 }
 
+#about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    border-radius: 5%;
+}
 
 @media screen and (max-width: 440px) {
     * {
