@@ -251,10 +251,18 @@ a:hover {
         box-sizing: border-box;
     }
 
-    html, body {
+    html {
         margin: 0;
         padding: 0;
         height: 100%;
+    }
+    body{
+        position:relative;
+        background: url("/assets/images/backdrop_yesteryear.JPG") center/cover;
+        background-blend-mode: lighten;
+        font-family: 'Akira Expanded', sans-serif;
+        margin: 0;
+        padding: 20px;
     }
 
     #header {
@@ -263,16 +271,26 @@ a:hover {
         align-items: center;
     }
 
+
     .logo,
-    .nav {
+    .nav,
+    #about,
+    .social-icons {
         width: 100%;
         justify-content: center;
         text-align: center;
+        padding: 10px;
     }
 
-    .nav {
+    .nav, 
+    .social-icons,
+    #about {
         flex-wrap: wrap;
         overflow: hidden;
+    }
+
+    .social-icons{
+        font-size: 10px;
     }
 
     .nav ul {
