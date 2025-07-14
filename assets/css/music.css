@@ -132,13 +132,11 @@ a:hover {
     padding: 1rem;
 }
 
-.bio-list,
 .ceo {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
 
 .ceo{
     text-align: center;
@@ -146,103 +144,48 @@ a:hover {
 }
 
 #bio{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 40px;
-    text-align: center;
-    margin:20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
 }
 
-.image-animation {
-  position: relative;
-  width: 250px; 
-  height: auto; 
-  margin: 1rem;
-
+.bio-list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
 }
 
-
-.image-animation:hover .picone{
-    -webkit-animation: picone 1.5s 2 alternate;
-     -moz-animation: picone 1.5s 2 alternate;
-      -ms-animation: picone 1.5s 2 alternate;
-       -o-animation: picone 1.5s 2 alternate;
-          animation: picone 1.5s 2 alternate;
+.image-row{
+    display: flex;
+    gap:10px;
+    justify-content: center;
 }
 
-.image-animation:hover .pictwo{
-    -webkit-animation: pictwo 1.5s 2 alternate;
-     -moz-animation: pictwo 1.5s 2 alternate;
-      -ms-animation: pictwo 1.5s 2 alternate;
-       -o-animation: pictwo 1.5s 2 alternate;
-          animation: pictwo 1.5s 2 alternate;
-}
-
-.picone, .pictwo {
-  height: auto;
-  margin: 20px;
-  position: absolute;
-  width: 230px;
-  top:0;
-  left:0;
-
-   
-  -webkit-box-shadow: 3px 3px 3px rgba(0,0,0,0.3);
-          box-shadow: 3px 3px 3px rgba(0,0,0,0.3);
-}
-
-.picone {
-  -webkit-transform: rotate(-7deg);
-     -moz-transform: rotate(-7deg);
-       -o-transform: rotate(-7deg);
-      -ms-transform: rotate(-7deg);
-          transform: rotate(-7deg);
-
-}
- 
-.pictwo {
-  left: 100px;
-  -webkit-transform: rotate(7deg);
-     -moz-transform: rotate(7deg);
-       -o-transform: rotate(7deg);
-      -ms-transform: rotate(7deg);
-          transform: rotate(7deg);
-}
-
-@keyframes picone {
-  0% {transform: rotate(-7deg)}
-  50% {transform: rotate(-14deg)}
-  100% {transform: rotate(-7deg)}
-}
- 
-@keyframes pictwo {
-  0% {left: 100px; z-index: 1; transform: rotate(7deg)}
-  49% {left: 350px; z-index: 1; transform: rotate(20deg)}
-  50% {left: 350px; z-index: -3; transform: rotate(20deg)}
-  100% {left: 100px; z-index: -3; transform: rotate(7deg)}
+.image-row img{
+    width: 400px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;;
 }
 
 .caption {
-  margin-top: 280px; /* pushes text below the animated images */
   text-align: center;
-  position: relative;
-  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
 }
 
 .caption h3 {
-  margin: 6rem 0 0;
+  margin: 5px 0 0 0;
   font-size: 1.2rem;
-  color: #fff;
-  text-shadow: 2px 2px 0 #000;
-  background-color: rgba(255, 255, 255, 0.6);
 }
 
 .caption .job-title {
-  margin: 0;
+  margin: 2px 0 0 0;
   font-size: 1rem;
   color: #fff;
   text-shadow: 2px 2px 0 #000;
-  background-color: rgba(255, 255, 255, 0.6);
 }
 
 
