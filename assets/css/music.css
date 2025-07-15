@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Akira Expanded';
-    src: url('/fonts/akira_expanded.otf');
+    src: url('./fonts/akira_expanded.otf');
     font-weight: normal;
     font-style: normal;
 }
