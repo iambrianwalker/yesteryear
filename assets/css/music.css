@@ -7,7 +7,7 @@
 
 body {
     position:relative;
-    background: url("/assets/images/backdrop_yesteryear.JPG") center/cover no-repeat;
+    background: url("./assets/images/backdrop_yesteryear.JPG") center/cover no-repeat;
     background-blend-mode: lighten;
     font-family: 'Akira Expanded', sans-serif;
     margin: 0;
