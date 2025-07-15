@@ -1,13 +1,13 @@
 @font-face {
     font-family: 'Akira Expanded';
-    src: url('../fonts/akira_expanded.otf');
+    src: url('../../fonts/akira_expanded.otf');
     font-weight: normal;
     font-style: normal;
 }
 
 body {
     position:relative;
-    background: url('images/backdrop_yesteryear.JPG') center/cover no-repeat;
+    background: url('../images/backdrop_yesteryear.JPG') center/cover no-repeat;
     background-blend-mode: lighten;
     font-family: 'Akira Expanded', sans-serif;
     margin: 0;
