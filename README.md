@@ -1,81 +1,56 @@
-# 🎵 Yesteryear ATL - Homepage
+# Yesteryear ATL
 
-Welcome to the official homepage for **Yesteryear ATL**, a music-focused creative collective. This static website introduces the brand, links to artists and releases, and provides contact information.
+Official static homepage for **Yesteryear ATL**, an independent music platform rooted in Atlanta's underground hip-hop scene.
 
----
+## Live site
 
-## 🌐 Live Demo
+https://www.yesteryearatl.com
 
-*(Coming soon — update this section with your deployment URL if hosted on GitHub Pages, Vercel, Netlify, etc.)*
+## About
 
----
+This is a minimal single-page site: centered branding, footer social links, and no backend or build step. It is hosted as static files on GitHub Pages.
 
-## 📁 Project Structure
+## Project structure
 
-yesteryear-homepage/
-├── index.html # Main landing page
-├── music.css # Stylesheet for layout and design
-├── logo.PNG # Brand logo and favicon
-└── backdrop_yesteryear.JPG # Background image (referenced in CSS)
+```
+Yesteryear/
+├── index.html              # Landing page
+├── CNAME                   # Custom domain (www.yesteryearatl.com)
+├── assets/
+│   ├── css/
+│   │   └── music.css       # Layout and typography
+│   └── images/
+│       └── logo.PNG        # Logo and favicon
+└── fonts/
+    └── akira_expanded.otf  # Custom display font
+```
 
+## Features
 
----
+- Single-page layout with centered logo on a black background
+- Footer links to Instagram, music (ffm.bio), and email
+- Akira Expanded custom font for text
+- Responsive scaling across screen sizes
+- SEO meta tags and favicon
 
-## 🚀 Features
+## Local preview
 
-- Clean and minimal HTML5 layout
-- Fixed-position header with navigation bar
-- Centered branding section
-- Footer with social media link and copyright
-- Favicon and SEO meta tags included
+Because the site uses root-relative paths (`/assets/...`, `/fonts/...`), serve it locally instead of opening `index.html` directly:
 
----
+```bash
+git clone https://github.com/iambrianwalker/yesteryear.git
+cd yesteryear
+python -m http.server 8080
+```
 
-## 🔗 Navigation Links
+Then open http://localhost:8080
 
-- `#home`: Top of the page
-- `#artists`: Placeholder for artist profiles
-- `#releases`: Placeholder for release content
-- `#about`: Brand information
-- `#contact`: Contact or social media
+## Links
 
-> **Note:** These anchors are placeholders. Corresponding sections must be added for full functionality.
+- Instagram: https://www.instagram.com/yesteryearatl/
+- Music: https://ffm.bio/yesteryear-atl
+- Email: contactyesteryearatl@gmail.com
 
----
+## License
 
-## 🖼 Assets Used
-
-- **logo.PNG** — used in the header, center logo, and favicon
-- **backdrop_yesteryear.JPG** — used as the background image (declared in `music.css`)
-
----
-
-## 🔧 Setup Instructions
-
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/iambrianwalker/yesteryear-homepage.git
-   cd yesteryear-homepage
-2. Open index.html in your web browser to view the homepage.
-
-3. Make sure music.css, logo.PNG, and backdrop_yesteryear.JPG are in the correct directory as referenced.
-
-📌 To Do
- Build out the #artists, #releases, #about, and #contact sections.
-
- Improve mobile responsiveness via CSS media queries.
-
- Optimize images for faster loading.
-
- Add transitions or animations for a modern look.
-
- Deploy site (e.g., GitHub Pages, Netlify, or Vercel).
-
- 📄 License
-This project is for educational or personal use. All rights reserved © 2025 Yesteryear ATL.
-
-🙌 Follow Us
-📎 ffm.bio/yesteryear-atl
-
-
-
+All rights reserved © Yesteryear ATL.
