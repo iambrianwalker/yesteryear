@@ -43,14 +43,15 @@
                     </a>
                 </li>
                 <li>
-                    <a aria-label="Email" href="mailto:contactyesteryearatl@gmail.com">
+                    <button type="button" class="copy-email" aria-label="Copy email address">
                         <span class="fa-stack fa-2x">
                             <i class="fas fa-circle fa-stack-2x"></i>
-                            <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                            <i class="fas fa-envelope fa-stack-1x fa-inverse copy-email-icon"></i>
                         </span>
-                    </a>
+                    </button>
                 </li>
             </ul>
+            <p class="copy-feedback" id="copy-feedback" role="status" aria-live="polite" hidden></p>
             <div class="copyright">
                 <p>&copy; <span id="year"></span> Yesteryear ATL. All Rights Reserved.</p>
             </div>
@@ -59,6 +60,54 @@
 
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
+
+        const EMAIL = 'contactyesteryearatl@gmail.com';
+        const emailBtn = document.querySelector('.copy-email');
+        const emailIcon = document.querySelector('.copy-email-icon');
+        const feedback = document.getElementById('copy-feedback');
+        let resetTimer;
+
+        async function copyEmail() {
+            try {
+                await navigator.clipboard.writeText(EMAIL);
+                showFeedback('Email copied!');
+            } catch {
+                const textarea = document.createElement('textarea');
+                textarea.value = EMAIL;
+                textarea.setAttribute('readonly', '');
+                textarea.style.position = 'absolute';
+                textarea.style.left = '-9999px';
+                document.body.appendChild(textarea);
+                textarea.select();
+                const copied = document.execCommand('copy');
+                document.body.removeChild(textarea);
+
+                if (copied) {
+                    showFeedback('Email copied!');
+                } else {
+                    showFeedback('Copy failed — email is ' + EMAIL);
+                }
+            }
+        }
+
+        function showFeedback(message) {
+            clearTimeout(resetTimer);
+            feedback.hidden = false;
+            feedback.textContent = message;
+            emailBtn.setAttribute('aria-label', 'Email copied to clipboard');
+            emailIcon.classList.remove('fa-envelope');
+            emailIcon.classList.add('fa-check');
+
+            resetTimer = setTimeout(function () {
+                feedback.hidden = true;
+                feedback.textContent = '';
+                emailBtn.setAttribute('aria-label', 'Copy email address');
+                emailIcon.classList.remove('fa-check');
+                emailIcon.classList.add('fa-envelope');
+            }, 2500);
+        }
+
+        emailBtn.addEventListener('click', copyEmail);
     </script>
 </body>
 </html>

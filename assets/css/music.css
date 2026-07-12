@@ -120,17 +120,45 @@ footer .socials {
 }
 
 footer .socials > li,
-footer .socials > li > a {
+footer .socials > li > a,
+footer .socials > li > button {
     display: inline-block;
     vertical-align: middle;
 }
 
-footer .socials > li > a {
+footer .socials > li > a,
+footer .socials > li > button {
     font-size: 0.75rem;
 }
 
-footer .socials > li > a .fa-inverse {
+footer .socials > li > button {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+}
+
+footer .socials > li > button:hover,
+footer .socials > li > button:focus {
+    opacity: 0.8;
+}
+
+footer .socials > li > a .fa-inverse,
+footer .socials > li > button .fa-inverse {
     color: #000;
+}
+
+.copy-feedback {
+    margin: 0 0 1rem;
+    font-size: 0.75rem;
+    color: #fff;
+    letter-spacing: 0.02em;
+    transition: opacity 0.25s linear;
+}
+
+.copy-feedback[hidden] {
+    display: none;
 }
 
 footer .copyright {
