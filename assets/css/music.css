@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'Akira Expanded';
+    src: url('/fonts/akira_expanded.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 *,
 *::before,
 *::after {
@@ -33,7 +40,7 @@ body {
     padding: 0;
     background-color: #000;
     color: #fff;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Akira Expanded', sans-serif;
     text-align: center;
 }
 
